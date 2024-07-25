@@ -66,7 +66,7 @@
                         : 'url(' . url('/img/avatar.png') . ')';
                         @endphp
                         <div class="avatar-preview mt-3">
-                            <div id="imagePreview" style="background-image: ('{{ $background }}')"></div>
+                            <div id="imagePreview" style="background-image: url('{{ $background }}')"></div>
                         </div>
                     </div>
                     @error('photo')

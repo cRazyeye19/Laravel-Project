@@ -94,8 +94,8 @@ class UserController extends Controller
             'last_name' => 'required',
             'email' => 'required|email|unique:users,email,' . $id,
             'photo' => 'mimes:png,jpg,jpeg|max:2048',
-            'photo_number' => 'required|regex:/^\+?\d{1,3}?[-.\s]?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/|unique:users,phone_number,' . $id,
-            'password' => 'required',
+            'phone_number' => 'required|regex:/^\+?\d{1,3}?[-.\s]?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/|unique:users,phone_number,' . $id,
+            'password' => 'nullable',
         ]);
 
         $update = User::findOrFail($id);
